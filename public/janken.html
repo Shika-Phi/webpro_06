@@ -6,9 +6,21 @@
 </head>
 <body>
     <form action="/janken">
-        <input type="text" name="hand" required>
+     <!DOCTYPE html>
+    <html lang="ja">
+    <form action="/test" method="get">
         <label for="hand">何を出す？</label>
-        <input type="submit" values="じゃんけん　ポン">
+
+        <input type="radio" name="hand" id="radio1" value="1">
+        <label for="radio1">グー</label><br>
+
+        <input type="radio" name="hand" id="radio2" value="2">
+        <label for="radio1">チョキ</label><br>
+
+        <input type="radio" name="hand" id="radio3" value="3">
+        <label for="radio1">パー</label><br>
+
+        <input type="submit" value="送信">
         <input type="hidden" name="win" value="0">
         <input type="hidden" name="total" value="0">
     </form>
