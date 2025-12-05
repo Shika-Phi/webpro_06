@@ -80,7 +80,10 @@ app.get("/janken", (req, res) => {
 
 app.get("returnhome", (req, res) => {
   res.render('index', { data: station });
+  res.render('index',{data: score})
 });
+
+
 
 app.get("/keiyo_add", (req, res) => {
   let id = req.query.id;
@@ -91,6 +94,16 @@ app.get("/keiyo_add", (req, res) => {
   res.render('db1', { data: station });
 });
 
+app.get("/bowlong", (req, res) => {
+  let id = req.query.id;
+  let code = req.query.code;
+  let name = req.query.name;
+  let newdata = { id: id, code: code, name: name };
+  score.push( newdata );
+  res.render('bowlingdb', { data: score });
+});
+
+
 
 let station = [
   { id:1, code:"JE01", name:"東京駅"},
@@ -99,6 +112,10 @@ let station = [
   { id:4, code:"JE13", name:"幕張豊砂駅"},
   { id:5, code:"JE14", name:"海浜幕張駅"},
   { id:6, code:"JE05", name:"新浦安駅"},
+];
+
+let score=[
+  
 ];
 
 app.get("/keiyo2", (req, res) => {
