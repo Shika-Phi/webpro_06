@@ -1,0 +1,19 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>OWキャラティア表</title>
+</head>
+<body>
+  <h2>Sティア</h2>
+  <table>
+    <tr><th>ID</th><th>駅コード</th><th>駅名</th></tr>
+      <% for( let row of data ) { %>
+        <tr><td><%= row.id %></td>
+        <td><%= row.code %></td>
+        <td><%= row.name %></td></tr>
+      <% } %>
+  </table>
+  <p><a href="./keiyo_add.html">追加フォームに戻る</a></p>
+</body>
+</html>
