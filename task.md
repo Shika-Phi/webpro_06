@@ -19,6 +19,7 @@
   - [ ] HTTPメソッドとリソース名一覧 :writing_hand:
   - [ ] データ構造 :writing_hand:
   - [ ] リソース名ごとの機能の詳細 :writing_hand:
+  - [ ] 登録データの詳細 :writing_hand:
 - [ ] 管理者向けドキュメントの構成
   - [ ] インストールから起動までの手順確認 :computer:
   - [ ] インストール方法 :writing_hand:
@@ -26,6 +27,9 @@
   - [ ] 起動できない場合 :writing_hand:
   - [ ] 終了方法 :writing_hand:
   - [ ] 分かっている不具合 :writing_hand:
+  - [ ] 不具合の対処方法 :writing_hand:
+  - [ ] 強制停止方法 :innocent:
+  
 - [ ] 利用者向けドキュメントの作業
   - [ ] 構成の検討 :thinking:
   - [ ] スクリーンショットの保存と整理 :computer:
@@ -37,4 +41,6 @@
   - [ ] データ追加 :writing_hand:
   - [ ] データ削除 :writing_hand:
   - [ ] データ編集 :writing_hand:
+    - [ ] 日時変更 :writing_hand:
+    - [ ] スコア変更 :writing_hand:
 - [ ] 提出 :tada:
