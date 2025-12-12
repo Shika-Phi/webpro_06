@@ -1,0 +1,19 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>日別ボウリング合計スコア・アベレージ表</title>
+</head>
+<body>
+  <h2>日別ボウリング合計スコア・アベレージ表</h2>
+  <table>
+    <tr><th>年月日</th><th>ゲーム数</th><th>合計スコア</th><th>平均スコア</th></tr>
+      <% for( let row of data ) { %>
+        <tr><td><%= row.id %></td>
+        <td><%= row.all %></td>
+        <td><%= row.code %></td>
+        <td><%= row.ave %></td></tr>
+      <% } %>
+  </table>
+</body>
+</html>

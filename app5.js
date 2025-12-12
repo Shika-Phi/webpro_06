@@ -94,13 +94,14 @@ app.get("/keiyo_add", (req, res) => {
   res.render('db1', { data: station });
 });
 
-app.get("/bowlong", (req, res) => {
+app.get("/bowling", (req, res) => {
   let id = req.query.id;
+  let all = req.query.all;
   let code = req.query.code;
   let name = req.query.name;
-  let newdata = { id: id, code: code, name: name };
+  let newdata = { id: id, all: all ,code: code, name: name };
   score.push( newdata );
-  res.render('bowlingdb', { data: score });
+  res.render('scoredb', { data: score });
 });
 
 
@@ -115,12 +116,38 @@ let station = [
 ];
 
 let score=[
-  
+  {day:"YYYY/MM/DD" }
 ];
 
 app.get("/keiyo2", (req, res) => {
   // 本来ならここにDBとのやり取りが入る
   res.render('keiyo2', { data: station });
+});
+
+
+app.get("/bbs", (req,res) => {
+    console.log("GET /BBS");
+    res.json( {test: "GET /BBS" });
+});
+
+app.post("/bbs", (req,res) => {
+    console.log("POST /BBS");
+    res.json( {test: "POST /BBS"});
+})
+
+app.get("/bbs/:id", (req,res) => {
+    console.log( "GET /BBS/" + req.params.id );
+    res.json( {test: "GET /BBS/" + req.params.id });
+});
+
+app.put("/bbs/:id", (req,res) => {
+    console.log( "PUT /BBS/" + req.params.id );
+    res.json( {test: "PUT /BBS/" + req.params.id });
+});
+
+app.delete("/bbs/:id", (req,res) => {
+    console.log( "DELETE /BBS/" + req.params.id );
+    res.json( {test: "DELETE /BBS/" + req.params.id });
 });
 
 

@@ -8,9 +8,10 @@
   <h2>日別ボウリング合計スコア・アベレージ表</h2>
   <table>
       <% for( let row of data ) { %>
-        ID:<%= row.id %><br>
-        駅コード:<%= row.code %><br>
-        駅名:<%= row.name %><br>
+        年月日:<%= row.id %><br>
+        ゲーム数:<%= row.all %><br>
+        合計スコア:<%= row.code %><br>
+        平均スコア:<%= row.ave %><br>
       <% } %>
   </table>
 </body>

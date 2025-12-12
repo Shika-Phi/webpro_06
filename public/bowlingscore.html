@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>記録を追加する</title>
+</head>
+<body>
+    <form action="/bowlingscore">
+
+        <label for="id">年月日</label>
+        <input type="date" name="id" id="id" required>
+        
+        <label for="all">ゲーム数</label>
+        <input type="number" name="all" id="all" required>
+
+        <label for="code">スコア</label>
+        <input type="number" name="code" id="code" required>
+
+        <label for="ave">平均スコア</label>
+        <input type="number" name="ave" id="ave" required>
+
+        <input type="submit" values="登録">
+    </form>
+</body>
+</html>
