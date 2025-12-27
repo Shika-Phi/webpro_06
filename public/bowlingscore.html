@@ -5,21 +5,24 @@
     <title>記録を追加する</title>
 </head>
 <body>
-    <form action="/bowlingscore">
+    <form action="/score" method="POST">
 
-        <label for="id">年月日</label>
-        <input type="date" name="id" id="id" required>
+        <label for="day">年月日</label>
+        <input type="date" name="day" id="day" required>
         
-        <label for="all">ゲーム数</label>
-        <input type="number" name="all" id="all" required>
+        <label for="game">ゲーム数</label>
+        <input type="number" name="game" id="game" required>
 
-        <label for="code">スコア</label>
-        <input type="number" name="code" id="code" required>
+        <label for="alls">スコア</label>
+        <input type="number" name="alls" id="alls" required>
 
         <label for="ave">平均スコア</label>
         <input type="number" name="ave" id="ave" required>
 
         <input type="submit" values="登録">
+        
     </form>
+    <a href="/public/index.html">ホームに戻る</a><br>
+    <a href="/score">一覧表に進む</a><br>
 </body>
 </html>

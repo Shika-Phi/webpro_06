@@ -1,0 +1,22 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.id %></title>
+</head>
+<body>
+  <h2><%= data.day %>の編集</h2>
+  <form action="/score/update/<%= data.id -1 %>" method="POST">
+    <table>
+      <tr><th>項目</th><th>データ</th></tr>
+      <tr><td>データ番号</td><td><input type="number" name="id" value="<%= data.id %>"></td></tr>
+      <tr><td>年月日</td><td><input type="date" name="day" value="<%= data.day %>"></td></tr>
+      <tr><td>ゲーム数</td><td><input type="number" name="game" value="<%= data.game %>"></td></tr>
+      <tr><td>合計スコア</td><td><input type="number" name="alls" value="<%= data.alls %>"></td></tr>
+      <tr><td>平均スコア</td><td><input type="number" name="ave" value="<%= data.ave %>"></td></tr>
+    </table>
+    <input type="submit" values="登録">
+  </form>
+  <a href="score">追加履歴に戻る</a>
+</body>
+</html>

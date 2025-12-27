@@ -1,0 +1,18 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>記録スコア</title>
+</head>
+<body>
+  <h2>記録スコア</h2>
+  <table>
+    <tr>記録年月日</tr>
+      <% let number = 0 %>
+      <% for( let row of data ) { %>
+        <td><a href="/bs2/<%= number %>"><%= row.day %></a></td></tr>
+        <% number += 1 %>
+      <% } %>
+  </table>
+</body>
+</html>

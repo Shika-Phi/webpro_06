@@ -1,0 +1,23 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.id %></title>
+</head>
+<body>
+  <h2><%= data.id %>のスコア詳細</h2>
+  <table>
+    <tr><th>項目</th><th>データ</th></tr>
+    <tr><td>年月日</td><td><%= data.id %></td></tr>
+    <tr><td>ゲーム数</td><td><%= data.game %></td></tr>
+    <tr><td>合計スコア</td><td><%= data.alls %></td></tr>
+    <tr><td>平均スコア</td><td><%= data.ave %></td></tr>
+  </table>
+
+  <br><br>
+  <a href="/public/bowlingscore.html">追加フォームに戻る</a>
+  <a href="/db4/edit/<%= data.number %>">編集</a>
+  <a href="/db4/delete/<%= data.number %>">削除</a>
+
+</body>
+</html>

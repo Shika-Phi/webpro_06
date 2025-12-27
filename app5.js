@@ -94,14 +94,14 @@ app.get("/keiyo_add", (req, res) => {
   res.render('db1', { data: station });
 });
 
-app.get("/bowling", (req, res) => {
+app.get("/bowlingscore", (req, res) => {
   let id = req.query.id;
   let all = req.query.all;
   let code = req.query.code;
-  let name = req.query.name;
-  let newdata = { id: id, all: all ,code: code, name: name };
+  let ave = req.query.ave;
+  let newdata = { id: id, all: all ,code: code, ave: ave };
   score.push( newdata );
-  res.render('scoredb', { data: score });
+  res.render('db2', { data: score });
 });
 
 
@@ -116,7 +116,7 @@ let station = [
 ];
 
 let score=[
-  {day:"YYYY/MM/DD" }
+  {id:"YYYY/MM/DD", all:25 , code:5000 , ave:200}
 ];
 
 app.get("/keiyo2", (req, res) => {

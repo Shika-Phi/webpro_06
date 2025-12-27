@@ -1,0 +1,35 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>表</title>
+  <style>
+    form { display: inline; } /* ボタンを改行させない */
+  </style>
+</head>
+<body>
+  <h2>日別ボウリング合計スコア・アベレージ表</h2>
+  
+  <table>
+      <% for( let row of data ) { %>
+        ID:<%= row.no %>
+        年月日:<%= row.id %>
+        ゲーム数:<%= row.all %>
+        合計スコア:<%= row.code %>
+        平均スコア:<%= row.ave %>
+        
+        <form action="/delete" method="POST">
+            <input type="hidden" name="no" value="<%= row.no %>">
+            <button class="data" type="submit">削除する<span class="arrow">←</span></button>
+            <meta http-equiv="refresh" content="0;URL=/bowlingscore">
+        </form>
+        <br>
+      <% } %>
+    </table>
+        
+   ↑NEW<br>
+   <a href="/public/index.html">ホームに戻る</a>
+   <a href="/public/bowlingscore.html">入力に戻る</a><br>
+
+</body>
+</html>

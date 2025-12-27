@@ -8,11 +8,17 @@
   <h2>日別ボウリング合計スコア・アベレージ表</h2>
   <table>
       <% for( let row of data ) { %>
-        年月日:<%= row.id %><br>
-        ゲーム数:<%= row.all %><br>
-        合計スコア:<%= row.code %><br>
-        平均スコア:<%= row.ave %><br>
+        ID:<%= row.no %>
+        年月日:<%= row.id %>
+        ゲーム数:<%= row.all %>
+        合計スコア:<%= row.code %>
+        平均スコア:<%= row.ave %>
+        <button class="data">削除する<span class="arrow">←</span></button><br>
       <% } %>
+          ↑NEW<br>
+          <button class="data">削除する<span class="arrow">←</span></button><br>
+          <a href="/public/index.html">ホームに戻る</a><br>
+          <a herf="/bowlingscore.html">入力に戻る</a>
   </table>
 </body>
 </html>
